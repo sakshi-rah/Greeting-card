@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Greeting Card</title>
+</head>
+<script>
+    function greetOn() {
+        document.getElementById("greet").src = "./Images/sunrise.jpg"
+        document.getElementById("btn-on").className = " btn btn-on";
+        document.getElementById("btn-off").className = " btn";
+        document.querySelector(".h1-tag").innerHTML=" HELLO, SAKSHI GOOD MORNING!⏰";
+        document.getElementById("container").className = "color-light";
+    }
+    function greetOff() {
+        document.getElementById("greet").src = "./Images/sunset.webp"
+        document.getElementById("btn-off").className = " btn btn-off";
+        document.getElementById("btn-on").className = " btn";
+        document.querySelector(".h1-tag").innerHTML=" HELLO, SAKSHI GOOD NIGHT!😴";
+        document.getElementById("container").className = "color-light";
+    }
+
+</script>
+<style>
+    .heading{
+       text-align: center;
+    }
+    .card {
+        display: block;
+        margin: auto;
+    }
+
+    .greet-img {
+        display: block;
+        margin: auto;
+        width: 750px;
+        border-radius: 20px;
+        box-shadow: 0px 3px 9px 3px black;
+
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        margin-top: 30px;
+    }
+
+    .btn {
+        border: 1px solid black;
+        font-size: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        padding: 8px;
+
+    }
+    .btn-on{
+        background-color: #ff471a;
+        color: white;
+    }
+    .btn-off{
+        background-color: rgb(49, 48, 48);
+        color: white;
+    }
+    .color-dark{
+        background-color: #001a33;
+    }
+    .color-light{
+        background-color: #ffa31a;
+    }
+    .h1-tag{
+        color: white;
+    }
+</style>
+
+<body id="container">
+    <div class="card">
+        <div class="heading" >
+            <h1 class="h1-tag"></h1>
+        </div>
+        <img src="./Images/sunrise.jpg" alt="" class="greet-img" id="greet">
+        <div class="btn-container">
+            <button class="btn" onclick="greetOn()" id="btn-on">morning</button>
+            <button class="btn" onclick="greetOff()" id="btn-off">night</button>
+        </div>
+    </div>
+</body>
+
+</html>
